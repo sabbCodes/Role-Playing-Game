@@ -1,0 +1,226 @@
+html, body{
+    margin: 0;
+    padding: 0;
+    background: rgb(51,43,55);
+    font-family: 'MedievalSharp', cursive;
+    text-align: center;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ============
+    Layout
+=============*/
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin: .5rem auto;    
+}
+
+.main-stage{
+    height: 17rem;
+    width: 62vw;
+    max-width: 350px;
+    font-size: 1.2rem;
+    margin-bottom: 1.2rem;
+    padding: 1.5vh 1.5vw 0;
+    background: #231d24;
+    border: 0.29rem solid #000721;
+    border-radius: 13px;
+    box-shadow: inset 0px 0px 6px 2px rgba(100,100,100,0.2),
+                0px 0px 10px rgba(117,182,214,0.2);
+}
+
+img{
+    width: 35%;
+    border: 2px solid rgb(6, 6, 51);
+    border-radius: 5px;
+    background: rgb(7, 7, 36);
+    box-shadow: 0px 0px 2px 2px rgba(150, 134, 106, 0.5);
+    margin-top: 0;
+}
+
+.healthbar-outer{
+    margin: .5em 0;
+    height: 1vh;
+    width: 100%;
+    background: #524253;
+    border-radius: 3px;
+}
+
+.healthbar-inner{
+    height: 1vh;
+    background: #19f505;
+    border-radius: 3px;
+}
+
+.danger{
+    background: red;
+}
+
+.dice-stage{
+    background: #000721;
+    background-size: contain;
+    height: 7.9vh;
+    width: 106%;
+    margin-bottom: 0;
+    padding: 0;
+    position: relative;
+    bottom: 0;
+    left: -10px;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .3em;
+    border: 1px solid #000721;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+}
+
+.dices,
+.placeholder-dices{
+    border-radius: 4px;
+    width: 35px;
+    height: 65%;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.placeholder-dices{
+    border: skyblue 1px solid;
+}
+
+.dices{
+    border-radius: 4px;
+    background: white;
+    color: black;
+}
+
+button{
+    width: 110px;
+    font-family: inherit;
+    font-size: 1.25rem;
+    text-transform: uppercase;
+    background: rgb(255, 165, 0);
+    color: crimson;
+    padding: .25em .4em;
+    border: crimson 1px solid;
+    border-radius: 4px;
+    transform: scale(1);
+    transition: 500ms;
+}
+
+button:hover,
+button:focus{
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.game-over{
+    position: absolute;
+    top: 30%;
+    text-align: center;
+    font-weight: 700;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.game-over h2,
+.game-over h3{
+    margin: .3rem;
+    font-size: 2.5rem;
+}
+
+.game-over .end-emoji{
+    text-align: center;
+    font-size: 3.5rem;
+    margin: 3rem 0;
+}
+
+/* =========
+    Typography
+=========*/
+
+h2{
+    margin-top: 1rem;
+    margin-bottom: 0.425em;
+    text-transform: uppercase;
+}
+
+p{
+    text-align: start;
+    margin-left: 1.25rem;
+    margin-bottom: .9rem;
+    text-transform: uppercase;
+}
+
+p b{
+    font-weight: bold;
+    color: white;
+}
+
+.health{
+    margin-top: .7rem;
+}
+
+/* ==============
+    Media Query
+===============*/
+
+@media (min-width: 550px) {
+    main{
+        flex-direction: row;
+        max-width: 700px;
+        gap: .9rem;
+        margin: 3.9rem auto;    
+    }
+
+    .main-stage{
+        margin: 0 auto;
+        height: 43.6vh;
+        width: 45vh;
+        padding-top: .3rem;
+        box-sizing: border-box;
+    }
+
+    img{
+        width: 40%;
+    }
+
+    .dice-stage{
+        height: 19.5%;
+        position: relative;
+        left: -12px;
+        width: 107.5%;
+    }
+
+    .dices,
+    .placeholder-dices{
+        width: 35px;
+        height: 60%;
+    }
+
+    p{
+        margin-bottom: 1rem;
+    }
+
+    button{
+        margin: 0 auto;
+        width: 110px;
+        height: 40px;
+    }
+
+    #hero .main-stage{
+        margin-bottom: 0;
+    }
+}
