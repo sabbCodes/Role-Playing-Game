@@ -44,7 +44,7 @@ class Characters {
         return `
         <div class="main-stage">
                     <h2>${name}</h2>
-                    <img src="${avatar}" alt="wizard picture">
+                    <img src="${avatar}" alt="character picture">
                     <p class="health">health: <b>${health}</b></p>
                     ${healthBar}
                     <div class="dice-stage">
